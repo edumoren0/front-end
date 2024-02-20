@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro</title>
+
+    <style>
+        body{
+            display: flex; /*usa flexbox para centralizar conteúdos*/
+            justify-content: center; /*centralizar horizontalmente*/
+            align-items: center; /*centralizar verticalmente*/
+            min-height: 100vh; /*altura mínima da página é 100*/
+            background-color: lightcyan;
+
+        }
+
+        .carro{
+            position: relative;
+            animation: moverCarro 5s linear infinite;
+        }
+
+        .corpo{
+            width: 300px;
+            height: 100px;
+            background-color: rgb(68, 46, 167);
+            border-radius: 20px 600px 30px 20px;
+        }
+
+        .roda{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: rgb(8, 7, 6);
+            border-radius: 35px;
+            animation: spin 1ms linear infinite;
+
+        }
+        @keyframes spin{
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        #roda1{
+            left: 10px;
+        }
+
+        #roda2{
+            right: 10px;
+        }
+
+        @keyframes moverCarro { /*inicia a definição de uma animação chamada moverCarro*/
+            0%{ /*inicio da animação*/
+                transform: translateX(0); /*inicia a movimentação na horizontal*/
+            }
+            100%{
+                transform: translateX(100vw); /*move o carro para a direita*/
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="carro">
+        <div class="corpo"></div>
+        <div class="roda" id="roda1"></div>
+        <div class="roda" id="roda2"></div>
+    </div>
+    
+</body>
+</html>
