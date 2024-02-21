@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coracão em HTML</title>
+<style>
+  body{
+            display: flex;/* usa flexbox para centralizar conteúdos*/
+        justify-content:center ;/*centralizar horizontalmente */
+        align-items: center;/*centralizar verticalmente*/
+        min-height: 100vh; /*altura mínima da página é 100% da viewport*/
+        background-color: rgb(1, 1, 2);
+        background: linear-gradient(to right, rgb(36, 4, 78), rgb(3, 38, 116), rgb(3, 38, 116),  rgb(36, 4, 78));
+        }
+        @keyframes pulse{ 
+            0%{
+                transform: scale(1.5) rotate(-45deg);;
+            }
+            50%{
+                transform: scale(1.2) rotate(-45deg);;
+            }
+            100%{
+                transform: scale(1.6) rotate(-45deg);;
+            }
+        
+        }
+          .heart {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(11, 14, 216);
+        position: absolute;
+        
+        animation: pulse .3s infinite;
+    }
+    .heart::before,
+    .heart::after {
+        content: '';
+        width: 100px;
+        height: 100px;
+        background-color: rgb(11, 14, 216);
+        border-radius: 50%;
+        position: absolute;
+    }
+    .heart::before {
+        top:  -50px;
+        left: 0;
+    }
+    .heart::after {
+        top: 0;
+        left: 50px;
+    }
+</style>
+</head>
+<body>
+  <div class="heart"></div>
+  <p>niG</p>
+</body>
+</html>
