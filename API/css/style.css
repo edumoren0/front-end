@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(18, 115, 148);
+}
+
+#cabecalho{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+#cabecalho img {
+    width:500px;
+}
+
+#container{
+    text-align: center;
+}
+
+p{
+    position: relative;
+    cursor: pointer;
+    display: inline;
+    margin-left: 30px;
+}
+
+#imagem{
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+}
+
+#status, #especie, #origem, #nome{
+    display: flex;
+    justify-content: center;
+}
